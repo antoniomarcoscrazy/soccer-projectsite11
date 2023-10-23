@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from play.soccerverse.pro/ by soccerverse/3.x [XR&CO'2014], Mon, 23 Oct 2023 17:39:31 GMT -->
+<head>
+  <base >
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description"
+    content="A multiplayer, community-driven football game where users can choose how they play from countless options.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="soccer_manager">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <link rel="stylesheet" type="text/css" href="nativesplash/style.css">
+  <style>
+    .grecaptcha-badge {
+      visibility: hidden;
+    }
+  </style>
+  <title>Soccerverse</title>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "3236384878";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="nativesplash/splash.js"></script>
+  <script src="npm/%40web3auth/modal%405.2.1/dist/modal.umd.min.js"></script>
+  <script
+    src="npm/%40web3auth/openlogin-adapter%405.2.1/dist/openloginAdapter.umd.min.js"></script>
+  <script src="lib/ethers-5.7.umd.min.js"></script>
+  <script src="ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script
+    src="npm/%40web3auth/torus-wallet-connector-plugin%405.1.0/dist/torusWalletConnectorPlugin.umd.min.js"></script>
+
+  <script src="biconomy_service/biconomy.js" defer></script>
+  <script src="web3service/abis.js" defer></script>
+  <script src="web3service/web3service.js" defer></script>
+  <script src="flutter.js" defer></script>
+
+  <!-- <script src="./biconomy_service/smartAccont.js"></script>
+  <script src="./biconomy_service/coreTypes.js"></script> -->
+</head>
+
+<body>
+
+  <script>
+    window.addEventListener('load', function (ev) {
+
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+
+
+  <picture id="splash">
+    <source
+      srcset="nativesplash/img/light-1x.png 1x, nativesplash/img/light-2x.png 2x, nativesplash/img/light-3x.png 3x, nativesplash/img/light-4x.png 4x"
+      media="(prefers-color-scheme: light)">
+    <source
+      srcset="nativesplash/img/dark-1x.png 1x, nativesplash/img/dark-2x.png 2x, nativesplash/img/dark-3x.png 3x, nativesplash/img/dark-4x.png 4x"
+      media="(prefers-color-scheme: dark)">
+    <img class="center" aria-hidden="true" src="nativesplash/img/light-1x.png" alt="" />
+  </picture>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+    import { initializeAppCheck, ReCaptchaV3Provider } from "https://cdnjs.cloudflare.com/ajax/libs/firebase/9.6.1/firebase-app-check.min.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyD0zn_hJafDNnniupZtqAMIika7_zY3GFY",
+      authDomain: "soccerverse-77880.firebaseapp.com",
+      projectId: "soccerverse-77880",
+      storageBucket: "soccerverse-77880.appspot.com",
+      messagingSenderId: "670529452110",
+      appId: "1:670529452110:web:fe66b82d762b437fbbeb1f",
+      measurementId: "G-8BDC362L2T"
+    };
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const appCheck = initializeAppCheck(app, {
+      provider: new ReCaptchaV3Provider('6LcDVdgkAAAAAHPP7F99GDJ-2DMPdO10M_8QKcv1'),
+      isTokenAutoRefreshEnabled: true
+    });
+  </script>
+
+</body>
+
+
+
+</html>
